@@ -25,28 +25,28 @@ public class SpringConfiguration {
 		return basicDataSource;
 	}
 	
-	@Bean(name="sqlSessionFactory")
-	public SqlSessionFactory getSqlSessionFactoryBean() throws Exception {
-		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
-		
-		PathMatchingResourcePatternResolver pmrpr = new PathMatchingResourcePatternResolver();
-		sqlSessionFactoryBean.setDataSource(dataSource());
-		sqlSessionFactoryBean.setConfigLocation(pmrpr.getResource("classpath:spring/mybatis-config.xml"));
-		sqlSessionFactoryBean.setMapperLocations(pmrpr.getResources("classpath:*/dao/*Mapper.xml"));
-		
-		return sqlSessionFactoryBean.getObject();
-	}
+//	@Bean(name="sqlSessionFactory")
+//	public SqlSessionFactory getSqlSessionFactoryBean() throws Exception {
+//		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+//		
+//		PathMatchingResourcePatternResolver pmrpr = new PathMatchingResourcePatternResolver();
+//		sqlSessionFactoryBean.setDataSource(dataSource());
+//		sqlSessionFactoryBean.setConfigLocation(pmrpr.getResource("classpath:spring/mybatis-config.xml"));
+//		sqlSessionFactoryBean.setMapperLocations(pmrpr.getResources("classpath:*/dao/*Mapper.xml"));
+//		
+//		return sqlSessionFactoryBean.getObject();
+//	}
 	
-	@Bean(name="sqlSession")
-	public SqlSessionTemplate getSqlSessionTemplate() throws Exception {
-		return new SqlSessionTemplate(getSqlSessionFactoryBean());
-	}
-	
-	@Bean(name="transactionManager")
-	public DataSourceTransactionManager getDataSourceTransactionManager() {
-		DataSourceTransactionManager dstm = new DataSourceTransactionManager();
-		dstm.setDataSource(dataSource());
-		return dstm;
-	}
+//	@Bean(name="sqlSession")
+//	public SqlSessionTemplate getSqlSessionTemplate() throws Exception {
+//		return new SqlSessionTemplate(getSqlSessionFactoryBean());
+//	}
+//	
+//	@Bean(name="transactionManager")
+//	public DataSourceTransactionManager getDataSourceTransactionManager() {
+//		DataSourceTransactionManager dstm = new DataSourceTransactionManager();
+//		dstm.setDataSource(dataSource());
+//		return dstm;
+//	}
 
 }
