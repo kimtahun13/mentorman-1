@@ -5,29 +5,37 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="https://d2ljmlcsal6xzo.cloudfront.net/packs/vendor-d00d42ee38137ae39144.js"></script>
+<script src="https://d2ljmlcsal6xzo.cloudfront.net/packs/application-978dcbe0c8e9f17a9e95.js"></script>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/include.postload.js"></script>
+<script src="../js/rollbar.min.js"></script>
+	
+<link rel="shortcut icon" href="" type="image/x-icon"/>
+<link rel="stylesheet" href="../css/all.css" type="text/css">
+<link rel="stylesheet"  href="../css/ly.css" type="text/css" />
+<link rel="stylesheet"  href="../css/famil.css"  type="text/css"/>
+<link rel="stylesheet"  href="../css/ovw.carousel.css"  type="text/css"/>
+<link rel="stylesheet"  href="../css/owl.theme.default.css"  type="text/css"/>
+<link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css"/>
 </head>
-<body>
+<body class="color-theme-pink ">
+	<div id="app" class="framework7-root">
 
-<table border="1" width="100%" cellspacing="0" cellpadding="6">
-	<tr>
-		<td align="center">
-			<jsp:include page="../template/top.jsp"/>
-		</td>
-	</tr>
-	
-	<tr>
-		<td width="100%" height="900" valign="top">
-			<jsp:include page="${display}"/>
-		</td>
-	</tr>
-	
-	<tr>
-		<td><jsp:include page="../template/bottom.jsp"/></td>
-	</tr>
-	
-	
-</table>
+			<div class="head">
+				<jsp:include page="../template/head.jsp" />
+			</div>
+			
+			<!-- display -->
+			<div class="container" id="container">
+				<jsp:include page="${display}" />
+			</div>
 
 
+			<!-- footer  -->
+			<div id="foot" id="foot">
+				<jsp:include page="../template/footer.jsp" />
+			</div>
+		</div>
 </body>
 </html>
