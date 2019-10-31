@@ -11,7 +11,7 @@ public class IndexController {
 	@RequestMapping(value="/main/index", method = RequestMethod.GET)
 	public ModelAndView index() {
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("display","/template/body.jsp");
+		mav.addObject("display","/template/container.jsp");
 		mav.setViewName("/main/index");
 		return mav;
 	}
