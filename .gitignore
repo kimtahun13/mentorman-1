@@ -3,6 +3,6 @@
 /mentorman/.settings/
 /mentorman/.project
 /mentorman/. springBeans
-/mentorman/target/.m2e-wtp/
-*.properties
+pom.properties
+MANIFEST.MF
 
