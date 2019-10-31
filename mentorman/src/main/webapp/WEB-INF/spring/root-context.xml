@@ -4,5 +4,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-		
+	<!--  Service, Repository(DAO), DB등 비즈니스 로직과 관련된 설정 -->
+	
+		<!-- <context:component-scan base-package="mentorman.conf"/>
+		<context:component-scan base-package="member.service"/>
+		<context:component-scan base-package="member.dao"/>
+		<context:component-scan base-package="member.bean"/> -->
 </beans>
