@@ -1,1 +1,7 @@
 /.metadata/
+/mentorman/.classpath
+/mentorman/.settings/
+/mentorman/.project
+/mentorman/. springBeans
+/mentorman/target/.m2e-wtp/
+
